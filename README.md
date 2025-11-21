@@ -2,6 +2,18 @@
 
 Este repositório contém as implementações práticas do curso de criptografia em Node.js da Alura, explorando o módulo `crypto` nativo.
 
+*[Curso realizado na Alura](https://cursos.alura.com.br/): Node.js: criptografia e tokens JWT*
+
+
+## Tecnologias:
+
+<div align="center">
+
+
+[![Backend](https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=node.js)](https://nodejs.org/)
+[![Crypto](https://img.shields.io/badge/Crypto-Node.js_Native-green?style=for-the-badge&logo=nodejs)](https://nodejs.org/api/crypto.html)
+</div>
+
 ## Conceitos Implementados
 
 ### 📝 Caesar Cipher (`src/cipher.js`)
@@ -26,9 +38,31 @@ Este repositório contém as implementações práticas do curso de criptografia
 - Criptografia simétrica
 - Uso da mesma chave para encriptar e descriptografar
 
+## Simulações de Ataques (Fins Educacionais)
+
+> **⚠️ AVISO IMPORTANTE**: Os scripts a seguir são implementações **extremamente simplificadas** para fins de **aprendizado apenas**. Eles não representam implementações reais ou viáveis na prática e possuem várias vulnerabilidades intencionais para demonstrar conceitos de segurança.
+
+### 🔨 Brute Force Attack (`src/simulations/bruteForce.js`)
+- Simulação de ataque de força bruta contra senhas
+- Demonstra como senhas fracas são facilmente quebradas
+- **Limitações**: Implementação fraca, sem throttling, sem proteção contra timing attacks além de computacionalmente ser muito cara
+
+### 🌈 Rainbow Table Attack (`src/simulations/rainbowTableAttack.js`)
+- Simulação de ataque usando rainbow tables
+- Demonstra como hashes sem salt são vulneráveis
+- **Limitações**: Tabela muito pequena, algoritmos simplificados
+
+### 📊 Dictionary Attack (`src/simulations/dictionaryAttack.js`)
+- Ataque usando dicionário de senhas comuns
+- Mostra efetividade contra senhas previsíveis
+- **Limitações**: Dicionário reduzido, sem otimizações computacionais
+
 ## Como Executar
 
 ```bash
+# Para inicializar o npm dentro do projeto
+npm init
+
 # Instalar dependências
 npm install
 
@@ -38,13 +72,22 @@ node src/hash/hash.js
 node src/saltedHash/saltedHash.js
 node src/asymmetricEncryption/asymmetricEncryption.js
 node src/symmetricEncryption/symmetricEncryption.js
+
+# Scripts de "ataque"
+node src/simulations/bruteForceAttack.js
+node src/simulations/dictionaryAttack.js
+node src/simulations/rainbowTableAttack.js
 ```
-
-## Tecnologias
-
-- **Node.js** - Runtime JavaScript
-- **crypto** - Módulo nativo do Node.js para criptografia
 
 ---
 
-*Curso realizado na Alura - Criptografia em Node.js*
+## Desenvolvedor
+
+<div align="center">
+
+**Flavio Kolenez**
+
+[![GitHub](https://img.shields.io/badge/GitHub-flavio--kolenez-181717?style=for-the-badge&logo=github)](https://github.com/flavio-kolenez)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077b5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/fkolenez)
+
+</div>
